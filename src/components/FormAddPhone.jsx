@@ -36,31 +36,31 @@ export default class FormAddPhone extends Component {
         return (
                 <form onSubmit={handelSabmit}>
                     <div className={css.formGrup}>
-                    <label className={css.titleInput} htmlFor="name">Name</label><br />
-                    <input className={css.input}
-                        id={nameId}
-                        type="text"
-                        value={name}
-                        name='name'
-                        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-                        title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-                        required
-                        onChange={handelChange}
+                        <label className={css.titleInput} htmlFor="name">Name</label><br />
+                        <input className={css.input}
+                            id={nameId}
+                            type="text"
+                            value={name}
+                            name='name'
+                            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+                            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+                            required
+                            onChange={handelChange}
                         />
                     </div>
                     <div className={css.formGrup}>
-                    <label className={css.titleInput} htmlFor="number">Number</label><br />
-                    <input className={css.input}
-                        id={numberId}
-                        type="tel"
-                        name='number'
-                        value={number}
-                        pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-                        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-                        required
-                        onChange={handelChange}
-                        />
-                        </div>
+                        <label className={css.titleInput} htmlFor="number">Number</label><br />
+                        <input className={css.input}
+                            id={numberId}
+                            type="tel"
+                            name='number'
+                            value={number}
+                            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+                            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+                            required
+                            onChange={handelChange}
+                            />
+                    </div>
                     <button className={css.button}>Add contact</button>
                 </form>
         )
