@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 import { Component } from "react";
 import { nanoid } from "nanoid";
-import css from 'components/ContactsBook.module.css'
+import css from 'components/FormAddPhone/FormAddPhone.module.css'
 
 export default class FormAddPhone extends Component {
     state = {

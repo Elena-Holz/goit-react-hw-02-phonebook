@@ -1,9 +1,9 @@
 import { Component } from "react";
 import { nanoid } from "nanoid";
-import ContactsForm from 'components/ContactsForm.jsx';
-import FormAddPhone from 'components/FormAddPhone.jsx';
-import Filter from "components/Filter";
-import css from 'components/ContactsBook.module.css'
+import ContactsItem from 'components/ContactsItem/ContactsItem.jsx';
+import FormAddPhone from 'components/FormAddPhone/FormAddPhone.jsx';
+import Filter from "components/Filter/Filter.jsx";
+import css from 'components/App.module.css'
 import PropTypes from "prop-types";
 
 export class App extends Component {
@@ -93,7 +93,7 @@ export class App extends Component {
         <FormAddPhone onSubmit={addContact} />
         <Filter filter={filter} handelChange={handelChange} />
         <h2 className={css.title}>Contacts</h2>
-        <ContactsForm items={contacts} removeContact={removeContact}/>
+        <ContactsItem items={contacts} removeContact={removeContact}/>
       </div>
     );
   };

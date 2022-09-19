@@ -1,7 +1,7 @@
-import css from 'components/ContactsBook.module.css'
+import css from 'components/ContactsItem/ContactsItem.module.css'
 import PropTypes from "prop-types";
 
-function ContactsForm({ items, removeContact }) {
+function ContactsItem({ items, removeContact }) {
     const elements = items.map(({ name, number, id }) => {
         return <li className={css.listItem} key={id}>{name}: {number}
             <span className={css.deleteItem} onClick={() => removeContact(id)}>Delete</span></li>
@@ -13,13 +13,13 @@ function ContactsForm({ items, removeContact }) {
         )
 }
 
-export default ContactsForm
+export default ContactsItem 
 
-ContactsForm.defaultProps = {
+ContactsItem.defaultProps = {
     items: []
 }
 
-ContactsForm.propTypes = {
+ContactsItem.propTypes = {
     items: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
