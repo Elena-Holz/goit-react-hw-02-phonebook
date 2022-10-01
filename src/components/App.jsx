@@ -12,7 +12,30 @@ export class App extends Component {
     filter: '',
    
   }
+
+  componentDidMount() {
+    const contacts = JSON.parse(localStorage.getItem('contacts'));
+    if (contacts?.length) {
+      console.log(contacts);
+      this.setState({
+      contacts,
+    })
+    }
+    
+    
+  }
   
+  componentDidUpdate(prevProps, prevState) {
+    console.log('componentDidUpdate');
+    console.log('prevProps', prevProps);
+    console.log('prevState', prevState);
+    const { contacts } = this.state;
+    
+    if (prevState.contacts !== contacts) {
+    console.log('kjgfds');
+    localStorage.setItem('contacts', JSON.stringify(contacts));
+  }
+  }
 
   addContact = (contact) => {
      if (this.isCopy(contact)) {
